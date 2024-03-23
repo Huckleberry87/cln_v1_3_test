@@ -982,7 +982,7 @@ class spawn_point_types {
 			};
 		};
 	};
-
+/*
 	class air_fire_support {
 		name = "Air support";
 		WRECK_MEDIUM;
@@ -1005,7 +1005,7 @@ class spawn_point_types {
 			};
 		};
 	};
-
+*/
 	class air_heavy_fire_support {
 		name = "Heavy air support";
 		WRECK_LONG;
@@ -1163,13 +1163,13 @@ class spawn_point_types {
 		name = "USMC Helicopters";
 		RESPAWN_SHORT;
 		class categories {
-			class m54_t {
-				name = "M54";
+			class ch34_t {
+				name = "CH-34";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { { "ch34","usmc" } };
 			};
-			class m151a {
-				name = "Jeep";
+			class uh1 {
+				name = "UH-1";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { { "uh1", "usmc" } };
 			};
