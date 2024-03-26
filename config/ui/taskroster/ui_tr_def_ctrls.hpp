@@ -63,130 +63,398 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 	
 	class controls
 	{
-		
-		class txtTop: vn_mf_RscStructuredText_c
+		// text showing number of players currently in the team
+		class txtActive: vn_mf_RscStructuredText_c
 		{
-			idc = -1;
+			idc = VN_TR_SELECTTEAM_TEAM_PLAYERCOUNT_IDC;
 			x = UIW(2);
-			y = UIH(2.5);
-			w = UIW(15.5);
-			h = UIH(0.9);
+			y = UIH(0.5);
+			w = UIW(16);
+			h = UIH(1);
 			
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
-			text = "Choose your team.";	//loc
+			text = "";	//loc
 			tooltip = "";
+			class Attributes
+			{
+				align = "right";
+				color = "#000000";
+				colorLink = "#D09B43";
+				font = USEDFONT;
+				size = 0.75;
+				shadow = 0;
+			};
 		};
-		
-		class txtTop2: vn_mf_RscStructuredText_c
+
+		class txtHeaderPublic: vn_mf_RscStructuredText
 		{
-			idc = VN_TR_SELECTTEAM_TEAM_PLAYERCOUNT_IDC;
+			idc = -1;
 			x = UIW(2);
-			y = UIH(3.5);
+			y = UIH(2);
 			w = UIW(15.5);
-			h = UIH(1.6);
+			h = UIH(1);
 			
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
-			size = TXT_S;
-			text = "Active Players:";	//loc
+			size = TXT_M;
+			text = "Public teams:";
 			tooltip = "";
 		};
-		
-		
-		class logoTL: vn_mf_RscButton_ImgSwitch
-		{
-			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TL_IDC;
-			x = UIW(2.75);
-			y = UIH(5.5);
-			w = UIW(6);
-			h = UIH(6);
-			
-			tooltip = "";
-			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
-			
-			onButtonClick = "['ACAV'] call vn_mf_fnc_tr_selectTeam;";
-		};
-		class logoTR: vn_mf_RscButton_ImgSwitch
-		{
-			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TR_IDC;
-			x = UIW(9.75);
-			y = UIH(5.5);
-			w = UIW(6);
-			h = UIH(6);
-			
-			tooltip = "";
-			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
-			
-			onButtonClick = "['GreenHornets'] call vn_mf_fnc_tr_selectTeam;";
-		};
+
+
+		// moved to Top left
 		class logoBL: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BL_IDC;
-			x = UIW(2.75);
-			y = UIH(12);
-			w = UIW(6);
-			h = UIH(6);
+			x = UIW(2.75); //(2.75);
+			y = UIH(3); //(12);
+			w = UIW(3); //(6);
+			h = UIH(3); //(6);
 			
-			tooltip = "";
+			tooltip = "Mike Force";
 			
 			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce.paa";
 			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
 			
 			onButtonClick = "['MikeForce'] call vn_mf_fnc_tr_selectTeam;";
 		};
+		//moved to center left center
+		class logoTL: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TL_IDC;
+			x = UIW(6.75);
+			y = UIH(3);
+			w = UIW(3); //(6);
+			h = UIH(3); //(6);
+			
+			tooltip = "ACAV";
+			
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
+			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
+			
+			onButtonClick = "['ACAV'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		//moved to center right
+		class logoTR: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TR_IDC;
+			x = UIW(10.75); //(9.75);
+			y = UIH(3);
+			w = UIW(3); //(6);
+			h = UIH(3); //(6);
+			
+			tooltip = "Green Hornets";
+			
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets.paa";
+			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
+			
+			onButtonClick = "['GreenHornets'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// top right
 		class logoBR: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BR_IDC;
-			x = UIW(9.75);
-			y = UIH(12);
-			w = UIW(6);
-			h = UIH(6);
+			x = UIW(14.75);
+			y = UIH(3);
+			w = UIW(3);
+			h = UIH(3);
 			
-			tooltip = "";
+			tooltip = "Spike Team";
 			
 			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam.paa";
 			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
 			
 			onButtonClick = "['SpikeTeam'] call vn_mf_fnc_tr_selectTeam;";
 		};
-		
-		
-		
-		class txtTeam: vn_mf_RscStructuredText
+
+
+		class txtHeaderWLU: vn_mf_RscStructuredText
 		{
-			idc = VN_TR_SELECTTEAM_TEAM_NAME_IDC;
+			idc = -1;
 			x = UIW(2);
-			y = UIH(18.5);
+			y = UIH(6.5);
 			w = UIW(15.5);
-			h = UIH(1.2);
-			
+			h = UIH(1);
+
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
-			text = "Select a Team";	//loc
+			text = "Whitelisted teams:";
 			tooltip = "";
 		};
+
+
+		// middle left
+		class logoEC: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_EC_IDC;
+			x = UIW(2.75); //(9.75);
+			y = UIH(7.5); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "31st MEU";
+			
+			text = "custom\taskroster\31st_logo_meu_gray.paa";
+			textUp = "custom\taskroster\31st_logo_meu_HL.paa";
+			
+			onButtonClick = "['3rdMEU'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// middle center left
+		class logoBH: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BH_IDC;
+			x = UIW(6.75); //(9.75);
+			y = UIH(7.5); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Black Horse";
+			
+			text = "custom\taskroster\blackhorse_gray.paa";
+			textUp = "custom\taskroster\blackhorse_HL.paa";
+			
+			onButtonClick = "['QuarterHorse'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// middle center right
+		class logoMK: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MK_IDC;
+			x = UIW(10.75);
+			y = UIH(7.5);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Muskets";
+			
+			text = "custom\taskroster\muskets_gray.paa";
+			textUp = "custom\taskroster\muskets_HL.paa";
+			
+			onButtonClick = "['Muskets'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// middle right
+		class logoTF: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TF_IDC;
+			x = UIW(14.75);
+			y = UIH(7.5);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "633rd";
+			
+			text = "custom\taskroster\633rdcombatsupportgroup_gray.paa";
+			textUp = "custom\taskroster\633rdcombatsupportgroup_HL.paa";
+			
+			onButtonClick = "['633rdCSG'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// bottom left
+		class logoMP: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MP_IDC;
+			x = UIW(2.75); //(9.75);
+			y = UIH(10.75); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Military Police";
+			
+			text = "custom\taskroster\militarypolice_gray.paa";
+			textUp = "custom\taskroster\militarypolice_HL.paa";
+			
+			onButtonClick = "['MilitaryPolice'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// bottom center left
+		class logoFM: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_FM_IDC;
+			x = UIW(6.75); //(9.75);
+			y = UIH(10.75); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "UDT";
+			
+			text = "custom\taskroster\frogmen_gray.paa";
+			textUp = "custom\taskroster\frogmen_HL.paa";
+			
+			onButtonClick = "['Frogmen'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// bottom center right
+		class logoSA: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_SA_IDC;
+			x = UIW(10.75);
+			y = UIH(10.75);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Satan's Angels";
+			
+			text = "custom\taskroster\satansangels_gray.paa";
+			textUp = "custom\taskroster\satansangels_HL.paa";
+			
+			onButtonClick = "['SatansAngels'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		// bottom right
+		class logoMO: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_PC_IDC;
+			x = UIW(14.75);
+			y = UIH(10.75);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Press";
+			
+			text = "custom\taskroster\presscorp_gray.paa";
+			textUp = "custom\taskroster\presscorp_HL.paa";
+			
+			onButtonClick = "['PressCorp'] call vn_mf_fnc_tr_selectTeam;";
+		};
 		
+		class logoSASR: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_SASR_IDC;
+			x = UIW(2.75); //(9.75);
+			y = UIH(14.25); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "NZ-SAS";
+			
+			text = "custom\taskroster\NZSAS_grey.paa";
+			textUp = "custom\taskroster\NZSAS_HL.paa";
+			
+			onButtonClick = "['SASR'] call vn_mf_fnc_tr_selectTeam;";
+		};
+
+		// class logoMontagnard: vn_mf_RscButton_ImgSwitch
+		// {
+		// 	idc = VN_TR_SELECTTEAM_TEAM_LOGO_MO_IDC;
+		// 	x = UIW(5); //(9.75);
+		// 	y = UIH(15.75); //(12);
+		// 	w = UIW(2);
+		// 	h = UIH(2);
+			
+		// 	tooltip = "";
+			
+		// 	text = "custom\taskroster\montagnard_gray.paa";
+		// 	textUp = "custom\taskroster\montagnard_HL.paa";
+			
+		// 	onButtonClick = "['Montagnard'] call vn_mf_fnc_tr_selectTeam;";
+		// };
+
+		class logoTigerForce: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TF_IDC;
+			x = UIW(10.75); //(9.75);
+			y = UIH(14.25); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "Tiger Force";
+			
+			text = "custom\taskroster\tigerforce_gray.paa";
+			textUp = "custom\taskroster\tigerforce_HL.paa";
+			
+			onButtonClick = "['TigerForce'] call vn_mf_fnc_tr_selectTeam;";
+		};
+
+		class logo7thCAV: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_7TH_IDC;
+			x = UIW(14.75); //(9.75);
+			y = UIH(14.25); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "7th CAV";
+			
+			text = "custom\taskroster\7thcav_gray.paa";
+			textUp = "custom\taskroster\7thcav_HL.paa";
+			
+			onButtonClick = "['7thCAV'] call vn_mf_fnc_tr_selectTeam;";
+		};
+
+		class logoARVN: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_ARVN_IDC;
+			x = UIW(6.75); //(9.75);
+			y = UIH(14.25); //(12);
+			w = UIW(3);
+			h = UIH(3);
+			
+			tooltip = "ARVNR";
+			
+			text = "custom\taskroster\ARVN_grey.paa";
+			textUp = "custom\taskroster\ARVN_HL.paa";
+			
+			onButtonClick = "['ARVN'] call vn_mf_fnc_tr_selectTeam;";
+		};
+		
+
+		//moved to center 
+		class logoMACV: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MACV_IDC;
+			x = UIW(14.75);
+			y = UIH(17.75);
+			w = UIW(3);
+			h = UIH(3);
+
+			tooltip = "MACV";
+
+			text = "custom\taskroster\macv_gray.paa";
+			textUp = "custom\taskroster\macv_HL.paa";
+			
+			onButtonClick = "['MACV'] call vn_mf_fnc_tr_selectTeam;";
+		};
+
+
+		// you can play as this team / you cannot play as this team.
+		// NOTE: THIS IS ON THE LEFT HAND PAGE.
 		class txtBot: vn_mf_RscStructuredText
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_TEXT_BOTTOM_IDC;
 			x = UIW(2);
-			y = UIH(19.9);
-			w = UIW(15.5);
-			h = UIH(2.8);
-			
+			y = UIH(21.5);
+			w = UIW(16);
+			h = UIH(2);
+
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
-			size = TXT_S;
-			text = "Take the fight to the VC in close quarter combat. Access to static weapon emplacements";	//loc
+			size = TXT_M;
+			text = "";
 			tooltip = "";
+
+			class Attributes
+			{
+				align = "left";
+				color = "#000000";
+				colorLink = "#D09B43";
+				font = USEDFONT;
+				size = 0.75;
+				shadow = 0;
+			};
 		};
+
+		// class txtTeam: vn_mf_RscStructuredText
+		// {
+		// 	idc = VN_TR_SELECTTEAM_TEAM_NAME_IDC;
+		// 	x = UIW(2);
+		// 	y = UIH(19);
+		// 	w = UIW(15.5);
+		// 	h = UIH(1.2);
+		//	
+		// 	colorText[] = {0.1,0.1,0.1,0.9};
+		// 	colorBackground[] = {0,0,0,0};
+		// 	size = TXT_M;
+		// 	text = "Select a Team";	//loc
+		// 	tooltip = "";
+		// };
 	};
 };
 
@@ -395,7 +663,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorDisabled[] = {0,0,0,0.5};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_M;
-			onButtonClick = "systemchat str [_this,'4. Support Request']; (_this#0) ctrlEnable false; call vn_mf_fnc_tr_supportTask_create;";
+			onButtonClick = "(_this#0) ctrlEnable false; call vn_mf_fnc_tr_supportTask_create;";
 			MouseButtonDown = "";	//No _this param given
 			text = "Create new support task";
 		};

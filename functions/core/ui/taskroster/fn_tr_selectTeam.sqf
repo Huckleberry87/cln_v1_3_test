@@ -21,26 +21,46 @@ disableSerialization;
 
 params ["_team"];
 
-if ([_team] call vn_mf_fnc_is_team_full) exitWith {
-	[
-		[
-			"STR_vn_mf_notification_title_team_full",
-			"STR_vn_mf_notification_desc_team_full"
-		]
-	] call para_c_fnc_postNotification;
-};
-
 vn_tr_groupID = _team;
 private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _team);
 private _groupNameFull = getText(_groupConfig >> "name");
 private _groupIcon = getText(_groupConfig >> "icon");
 private _groupName = getText(_groupConfig >> "shortname");
+private _groupDescription = getText(_groupConfig >> "description");
 
 // _display = uinamespace getvariable ["vn_tr_disp_selectTeam", DisplayNull];
 //set standard Missionname (Briefing Text)
-VN_TR_SELECTTEAM_TEAM_NAME_CTRL ctrlSetStructuredText parsetext _groupNameFull;
+
+// @dijksterhuis: Disabled for UI redesign
+// VN_TR_SELECTTEAM_TEAM_NAME_CTRL ctrlSetStructuredText parsetext _groupNameFull;
+
 //Img on the lext side
 VN_TR_SELECTTEAM_TEAM_LOGO_CTRL ctrlSetText _groupIcon;
+
+// left hand side text descriptions
+VN_TR_SELECTTEAM_TEAM_DESC_CTRL ctrlSetStructuredText parsetext _groupNameFull;
+VN_TR_SELECTTEAM_TEAM_TEXT_CTRL ctrlSetStructuredText parsetext _groupDescription;
+
+private _acceptButtonEnabled = false;
+private _uid = getPlayerUID player;
+
+if(_team in ["MikeForce", "ACAV", "GreenHornets", "SpikeTeam"])then {
+	_acceptButtonEnabled = true;
+} else {
+	private _teamArray = missionNamespace getVariable [format["whitelist_%1", _team], []];
+	private _dodArray = missionNamespace getVariable["whitelist_DoD", []];
+
+	if(_uid in _teamArray) then { _acceptButtonEnabled = true; };
+	if(_uid in _dodArray) then { _acceptButtonEnabled = true; };
+};
+
+if (_acceptButtonEnabled) then {
+	VN_TR_SELECTTEAM_TEAM_TEXT_BOTTOM_CTRL ctrlSetStructuredText parsetext "You can play as this team.";
+} else {
+	VN_TR_SELECTTEAM_TEAM_TEXT_BOTTOM_CTRL ctrlSetStructuredText parsetext "You cannot play as this team. Visit discord.gg/bro-nation to find out how to apply.";
+};
+
+VN_TR_SELECTTEAM_ACCEPT_CTRL ctrlEnable _acceptButtonEnabled;
 
 private _playerCount = count (missionNamespace getVariable [_team, []]);
 
@@ -71,21 +91,3 @@ _text = composeText [
 						"Good luck out there, you're going to need it!"];
 VN_TR_SELECTTEAM_TEAM_TEXT_CTRL ctrlSetStructuredText _text;
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,62 +1,84 @@
-class green_hornet
-{
-	lockTeam = "MACV","DacCong", "GreenHornets","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN";
-};
-
-class acav
-{
-	lockTeam = "MACV","DacCong","ACAV","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN";
-};
-
-class mike_force
-{
-	lockTeam = "MACV","DacCong","MikeForce","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN";
-};
-
-class spike_team
-{
-	lockTeam = "MACV","DacCong","SpikeTeam","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN";
-};
-
-class musket
-{
-	lockTeam = "MACV","DacCong","Muskets";
-};
-
-class blackhorse
-{
-	lockTeam = "MACV","DacCong","BlackHorse";
-};
-
-
-class sa
-{
-	lockTeam = "MACV","DacCong","SatansAngels";
-};
-
-class arvn
-{
-	lockTeam = "MACV","DacCong","ARVN";
-};
-
-class usmc
-{
-	lockTeam = "MACV","DacCong","3rdMEU";
-};
-
-class armor
-{
-	lockTeam = "MACV","DacCong","3rdMEU","ACAV","BlackHorse";
-};
-
-class dac_cong
-{
-	lockTeam = "MACV","DacCong";
-};
-
-class unlocked
+class unlocked 
 {
 	lockTeam = "Unlocked";
+};
+
+//PUBLIC AIRCRAFT
+class green_hornet
+{
+	lockTeam[] = {"MACV","DacCong", "GreenHornets","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+};
+
+//PUBLIC ARMOR 
+class acav
+{
+	lockTeam[] = {"MACV","DacCong","ACAV","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+};
+
+//PUBLIC VEHICLES -ACAV, -MF
+class mike_force
+{
+	lockTeam[] = {"MACV","DacCong","MikeForce","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+};
+
+// PUBLIC VEHICLES -ACAV, -MF
+class spike_team
+{
+	lockTeam[] = {"MACV","DacCong","SpikeTeam","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+};
+
+// WL ROTARY CAS
+class musket
+{
+	lockTeam[] = {"MACV","DacCong","Muskets"};
+};
+
+// WL ARTY
+class blackhorse
+{
+	lockTeam[] = {"MACV","DacCong","BlackHorse"};
+};
+
+// WL FIXED WING CAS
+class sa
+{
+	lockTeam[] = {"MACV","DacCong","SatansAngels"};
+};
+
+// WL Independent VEH
+class arvn
+{
+	lockTeam[] = {"MACV","DacCong","ARVN"};
+};
+
+// WL USMC ASSETS
+class usmc
+{
+	lockTeam[] = {"MACV","DacCong","3rdMEU"};
+};
+
+// WL ARMOR
+class armor
+{
+	lockTeam[] = {"MACV","DacCong","3rdMEU","ACAV","BlackHorse"};
+};
+
+// WL Boat
+class frogmen
+{
+	lockTeam[] = {"MACV","DacCong","Frogmen"};
+};
+
+// WL 7th Cav
+class aircav
+{
+	lockTeam[] = {"MACV","DacCong","7thCav"};
+};
+
+// WL OPFOR
+class dac_cong
+{
+	lockTeam[] = {"MACV","DacCong"};
 };
 
 //Jeeps + Small Cars
@@ -81,6 +103,10 @@ class vn_b_armor_m113_acav_03 : acav {};
 class vn_b_armor_m113_acav_04 : acav {};
 class vn_b_armor_m113_acav_05 : acav {};
 class vn_b_armor_m113_acav_06 : acav {};
+
+// M113 command and ambulance variants
+class vn_b_armor_m577_01 : acav {};
+class vn_b_armor_m577_02 : acav {};
 
 // M113 mortar and flamethrower
 class vn_b_armor_m125_01 : armor {};
@@ -123,15 +149,17 @@ class vn_c_boat_01_01 : unlocked {};
 class vn_c_boat_02_01 : unlocked {};
 
 //US Boats
-class vn_b_boat_05_01 : unlocked {};
-class vn_b_boat_06_01 : unlocked {};
+class vn_b_boat_05_01 : frogmen {};
+class vn_b_boat_06_01 : frogmen {};
 class vn_b_boat_09_01 : unlocked {};
 class vn_b_boat_10_01 : unlocked {};
 class vn_b_boat_11_01 : unlocked {};
 class vn_b_boat_12_01 : unlocked {};
 class vn_b_boat_13_01 : unlocked {};
+class B_Boat_Transport_01_F : unlocked {};
 
 //Air assets
+//CAS
 //Cobra Helicopter
 class vn_b_air_ah1g_01 : musket {};
 class vn_b_air_ah1g_02 : musket {};
@@ -143,7 +171,6 @@ class vn_b_air_ah1g_07 : musket {};
 class vn_b_air_ah1g_08 : musket {};
 class vn_b_air_ah1g_09 : musket {};
 class vn_b_air_ah1g_10 : musket {};
-
 class vn_b_air_ah1g_01_usmc : musket {};
 class vn_b_air_ah1g_02_usmc : musket {};
 class vn_b_air_ah1g_03_usmc : musket {};
@@ -154,26 +181,78 @@ class vn_b_air_ah1g_07_usmc : musket {};
 class vn_b_air_ah1g_08_usmc : musket {};
 class vn_b_air_ah1g_09_usmc : musket {};
 class vn_b_air_ah1g_10_usmc : musket {};
-
 // CH-47 Guns-a-go-go
 class vn_b_air_ach47_01_01 : musket {};
-
-// CH-47 transport variants
-class vn_b_air_ch47_01_01 : green_hornet {};
-class vn_b_air_ch47_02_01 : green_hornet {};
-class vn_b_air_ch47_03_01 : green_hornet {};
-class vn_b_air_ch47_04_01 : green_hornet {};
-
-//Choctaw
-class vn_b_air_ch34_01_01 : green_hornet {};
-class vn_b_air_ch34_03_01 : green_hornet {};
-
 //Choctaw gunships
 class vn_b_air_ch34_04_01 : musket {};
 class vn_b_air_ch34_04_02 : musket {};
 class vn_b_air_ch34_04_03 : musket {};
 class vn_b_air_ch34_04_04 : musket {};
+//UH1C - Hog
+class vn_b_air_uh1c_01_01 : musket {};
+class vn_b_air_uh1c_01_02 : musket {};
+class vn_b_air_uh1c_01_03 : musket {};
+class vn_b_air_uh1c_01_04 : musket {};
+class vn_b_air_uh1c_01_05 : musket {};
+class vn_b_air_uh1c_01_06 : musket {};
+class vn_b_air_uh1c_01_07 : musket {};
+//UH1C - Gunship
+class vn_b_air_uh1c_02_01 : musket {};
+class vn_b_air_uh1c_02_02 : musket {};
+class vn_b_air_uh1c_02_03 : musket {};
+class vn_b_air_uh1c_02_04 : musket {};
+class vn_b_air_uh1c_02_05 : musket {};
+class vn_b_air_uh1c_02_06 : musket {};
+class vn_b_air_uh1c_02_07 : musket {};
+//UH1C - Hornet
+class vn_b_air_uh1c_03_01 : musket {};
+class vn_b_air_uh1c_03_02 : musket {};
+class vn_b_air_uh1c_03_03 : musket {};
+class vn_b_air_uh1c_03_04 : musket {};
+class vn_b_air_uh1c_03_05 : musket {};
+class vn_b_air_uh1c_03_06 : musket {};
+class vn_b_air_uh1c_03_07 : musket {};
+//UH1C - Frog
+class vn_b_air_uh1c_04_01 : musket {};
+class vn_b_air_uh1c_04_02 : musket {};
+class vn_b_air_uh1c_04_03 : musket {};
+class vn_b_air_uh1c_04_04 : musket {};
+class vn_b_air_uh1c_04_05 : musket {};
+class vn_b_air_uh1c_04_06 : musket {};
+class vn_b_air_uh1c_04_07 : musket {};
+//UH1C - Heavy Hog
+class vn_b_air_uh1c_05_01 : musket {};
+class vn_b_air_uh1c_05_02 : musket {};
+class vn_b_air_uh1c_05_03 : musket {};
+class vn_b_air_uh1c_05_04 : musket {};
+class vn_b_air_uh1c_05_05 : musket {};
+class vn_b_air_uh1c_05_06 : musket {};
+class vn_b_air_uh1c_05_07 : musket {};
+//UH1C - ARA
+class vn_b_air_uh1c_06_01 : musket {};
+class vn_b_air_uh1c_06_02 : musket {};
+//UH-1D Bushranger
+class vn_b_air_uh1d_03_06 : musket {};
+//UH-1E - Gunship
+class vn_b_air_uh1e_01_04 : musket {};
+//UH1E - Heavy Gunship
+class vn_b_air_uh1e_02_04 : musket {};
 
+//Transport
+// CH-47 transport variants
+class vn_b_air_ch47_01_01 : green_hornet {};
+class vn_b_air_ch47_02_01 : green_hornet {};
+class vn_b_air_ch47_03_01 : green_hornet {};
+class vn_b_air_ch47_04_01 : green_hornet {};
+class vn_b_air_ch47_03_02 : aircav {};
+class vn_b_air_ch47_01_02 : aircav {};
+//Choctaw
+class vn_b_air_ch34_01_01 : green_hornet {};
+class vn_b_air_ch34_03_01 : green_hornet {};
+//CH34 - Heavy Transport
+class vn_i_air_ch34_01_02 : arvn {};
+class vn_i_air_ch34_02_01 : arvn {};
+class vn_i_air_ch34_02_02 : arvn {};
 //Littlebird
 class C_Heli_Light_01_civil_F : green_hornet {};
 class vn_b_air_oh6a_01 : green_hornet {};
@@ -183,16 +262,12 @@ class vn_b_air_oh6a_04 : green_hornet {};
 class vn_b_air_oh6a_05 : green_hornet {};
 class vn_b_air_oh6a_06 : green_hornet {};
 class vn_b_air_oh6a_07 : green_hornet {};
-
-//UH-1B
+//UH1B - Dustoff
 class vn_b_air_uh1b_01_01 : green_hornet {};
-
-
-// M113 command and ambulance variants
-class vn_b_armor_m577_01 : acav {};
-class vn_b_armor_m577_02 : acav {};
-
-
+//UH1B - Slick
+class vn_b_air_uh1c_07_01 : green_hornet {};
+//UH1B - Air Cav Slick
+class vn_b_air_uh1c_07_02 : aircav {};
 //UH1D - Dustoff
 class vn_b_air_uh1d_01_01 : green_hornet {};
 class vn_b_air_uh1d_01_02 : green_hornet {};
@@ -201,85 +276,18 @@ class vn_b_air_uh1d_01_04 : green_hornet {};
 class vn_b_air_uh1d_01_05 : green_hornet {};
 class vn_b_air_uh1d_01_06 : green_hornet {};
 class vn_b_air_uh1d_01_07 : green_hornet {};
-
 //UH1D - Slick
 class vn_b_air_uh1d_02_01 : green_hornet {};
-class vn_b_air_uh1d_02_02 : green_hornet {};
+class vn_b_air_uh1d_02_02 : aircav {};
 class vn_b_air_uh1d_02_03 : green_hornet {};
 class vn_b_air_uh1d_02_04 : green_hornet {};
 class vn_b_air_uh1d_02_05 : green_hornet {};
 class vn_b_air_uh1d_02_06 : green_hornet {};
 class vn_b_air_uh1d_02_07 : green_hornet {};
-
-//UH-1D Bushranger
-class vn_b_air_uh1d_03_06 : musket {};
-
-//UH1C - Hog
-class vn_b_air_uh1c_01_01 : musket {};
-class vn_b_air_uh1c_01_02 : musket {};
-class vn_b_air_uh1c_01_03 : musket {};
-class vn_b_air_uh1c_01_04 : musket {};
-class vn_b_air_uh1c_01_05 : musket {};
-class vn_b_air_uh1c_01_06 : musket {};
-class vn_b_air_uh1c_01_07 : musket {};
-
-//UH1C - Gunship
-class vn_b_air_uh1c_02_01 : musket {};
-class vn_b_air_uh1c_02_02 : musket {};
-class vn_b_air_uh1c_02_03 : musket {};
-class vn_b_air_uh1c_02_04 : musket {};
-class vn_b_air_uh1c_02_05 : musket {};
-class vn_b_air_uh1c_02_06 : musket {};
-class vn_b_air_uh1c_02_07 : musket {};
-
-//UH1C - Hornet
-class vn_b_air_uh1c_03_01 : musket {};
-class vn_b_air_uh1c_03_02 : musket {};
-class vn_b_air_uh1c_03_03 : musket {};
-class vn_b_air_uh1c_03_04 : musket {};
-class vn_b_air_uh1c_03_05 : musket {};
-class vn_b_air_uh1c_03_06 : musket {};
-class vn_b_air_uh1c_03_07 : musket {};
-
-//UH1C - Frog
-class vn_b_air_uh1c_04_01 : musket {};
-class vn_b_air_uh1c_04_02 : musket {};
-class vn_b_air_uh1c_04_03 : musket {};
-class vn_b_air_uh1c_04_04 : musket {};
-class vn_b_air_uh1c_04_05 : musket {};
-class vn_b_air_uh1c_04_06 : musket {};
-class vn_b_air_uh1c_04_07 : musket {};
-
-//UH1C - Heavy Hog
-class vn_b_air_uh1c_05_01 : musket {};
-class vn_b_air_uh1c_05_02 : musket {};
-class vn_b_air_uh1c_05_03 : musket {};
-class vn_b_air_uh1c_05_04 : musket {};
-class vn_b_air_uh1c_05_05 : musket {};
-class vn_b_air_uh1c_05_06 : musket {};
-class vn_b_air_uh1c_05_07 : musket {};
-
-//UH1C - ARA
-class vn_b_air_uh1c_06_01 : musket {};
-class vn_b_air_uh1c_06_02 : musket {};
-
-//UH1B - Slick
-class vn_b_air_uh1c_07_01 : green_hornet {};
-
-//UH-1E
-class vn_b_air_uh1e_03_04 : musket {};
-class vn_b_air_uh1e_01_04 : musket {};
-
-//UH1E - Heavy Gunship
-class vn_b_air_uh1e_02_04 : musket {};
-
+//UH-1E - Slick
+class vn_b_air_uh1e_03_04 : green_hornet {};
 //UH1F - Slick
 class vn_b_air_uh1f_01_03 : green_hornet {};
-
-//CH34 - Heavy Transport
-class vn_i_air_ch34_01_02 : arvn {};
-class vn_i_air_ch34_02_01 : arvn {};
-class vn_i_air_ch34_02_02 : arvn {};
 
 //F4 aircraft
 class vn_b_air_f4c_cap : sa {};
