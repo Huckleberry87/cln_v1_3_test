@@ -1,30 +1,30 @@
 class unlocked 
 {
-	lockTeam = "Unlocked";
+	lockTeam[] = {};
 };
 
 //PUBLIC AIRCRAFT
 class green_hornet
 {
-	lockTeam[] = {"MACV","DacCong", "GreenHornets","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+	lockTeam[] = {"MACV","DacCong", "GreenHornets","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
 };
 
 //PUBLIC ARMOR 
 class acav
 {
-	lockTeam[] = {"MACV","DacCong","ACAV","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+	lockTeam[] = {"MACV","DacCong","ACAV","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
 };
 
 //PUBLIC VEHICLES -ACAV, -MF
 class mike_force
 {
-	lockTeam[] = {"MACV","DacCong","MikeForce","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+	lockTeam[] = {"MACV","DacCong","MikeForce","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
 };
 
 // PUBLIC VEHICLES -ACAV, -MF
 class spike_team
 {
-	lockTeam[] = {"MACV","DacCong","SpikeTeam","3rdMEU","MilitaryPolice","BlackHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+	lockTeam[] = {"MACV","DacCong","SpikeTeam","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
 };
 
 // WL ROTARY CAS
@@ -34,9 +34,9 @@ class musket
 };
 
 // WL ARTY
-class blackhorse
+class QuarterHorse
 {
-	lockTeam[] = {"MACV","DacCong","BlackHorse"};
+	lockTeam[] = {"MACV","DacCong","QuarterHorse"};
 };
 
 // WL FIXED WING CAS
@@ -60,7 +60,7 @@ class usmc
 // WL ARMOR
 class armor
 {
-	lockTeam[] = {"MACV","DacCong","3rdMEU","ACAV","BlackHorse"};
+	lockTeam[] = {"MACV","DacCong","3rdMEU","ACAV","QuarterHorse"};
 };
 
 // WL Boat
@@ -72,7 +72,7 @@ class frogmen
 // WL 7th Cav
 class aircav
 {
-	lockTeam[] = {"MACV","DacCong","7thCav"};
+	lockTeam[] = {"MACV","DacCong","7thCAV"};
 };
 
 // WL OPFOR
@@ -341,8 +341,8 @@ class vn_b_air_f4b_navy_sead : sa {};
 class vn_b_air_f100d_at : sa {};
 
 //Howitzer
-class vn_b_army_static_m101_02 : blackhorse {};
-class vn_b_sf_static_m101_02 : blackhorse {};
+class vn_b_army_static_m101_02 : QuarterHorse {};
+class vn_b_sf_static_m101_02 : QuarterHorse {};
 
 //Unsung
 //Jeeps + Small Cars

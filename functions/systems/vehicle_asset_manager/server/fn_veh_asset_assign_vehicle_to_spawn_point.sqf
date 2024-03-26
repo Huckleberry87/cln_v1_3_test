@@ -30,8 +30,8 @@ _vehicle addEventHandler ["RopeAttach", {[_this # 2] call vn_mf_fnc_veh_asset_un
 private _lockTeamArr = [];
 private _lockTeamConfig = missionConfigFile >> "gamemode" >> "vehicle_lock_info" >> typeOf _vehicle;
 if (isClass (_lockTeamConfig)) then {
-	private _lockTeam = getText (_lockTeamConfig >> "lockTeam");
-	if !(_lockTeam == "Unlocked") then {
+	private _lockTeam = getArray (_lockTeamConfig >> "lockTeam");
+	if !(count(_lockTeam) == 0) then {
 		_lockTeamArr pushBack _lockTeam;
 	};
 };

@@ -24,11 +24,16 @@ private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BI
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 
 if (_role == "driver" || _isCopilot) exitWith {
-	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
-	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
-		true
-	};
-	false
+    private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
+    if (!(_teamsVehicleIsLockedTo isEqualTo [])) then {
+        _teamsVehicleIsLockedTo = _teamsVehicleIsLockedTo select 0;
+    };
+
+    if (_playerGroup in _teamsVehicleIsLockedTo || typeName _teamsVehicleIsLockedTo != "ARRAY" || count(_teamsVehicleIsLockedTo) isEqualTo 0) exitWith {
+        true
+    };
+
+    false
 };
 
 true
