@@ -13,11 +13,17 @@ class vehicles {
 	class vn_b_air_ch47_01_01 {
 		tags[] = {"ch47","armed","transport","helicopter","army"};
 	};
+	class vn_b_air_ch47_01_02 {
+		tags[] = {"ch47", "transport", "helicopter", "7th"};
+	};
 	class vn_b_air_ch47_02_01 {
 		tags[] = {"ch47","armed","transport","helicopter","Dustoff"};
 	};
 	class vn_b_air_ch47_03_01 {
 		tags[] = {"ch47","armed","transport","helicopter","cargo","army"};
+	};
+	class vn_b_air_ch47_03_02 {
+		tags[] = {"ch47", "transport", "helicopter", "7th"};
 	};
 	class vn_b_air_ch47_04_01 {
 		tags[] = {"ch47","armed","transport","helicopter","army"};
@@ -25,26 +31,14 @@ class vehicles {
 	class vn_b_air_oh6a_01 {
 		tags[] = {"oh6a","transport","helicopter"};
 	};
-	class vn_b_air_uh1b_01_01 {
+	class vn_b_air_uh1b_01_03 {
+		tags[] = {"uh1","transport","medical", "helicopter", "Dustoff"};
+	};
+	class vn_b_air_uh1d_01_03 {
 		tags[] = {"uh1","transport","medical", "helicopter", "Dustoff"};
 	};
 	class vn_b_air_uh1e_03_04 {
 		tags[] = {"uh1","armed","transport","helicopter","usmc"};
-	};
-	class vn_b_air_uh1f_01_03 {
-		tags[] = {"uh1","armed","transport","helicopter","usaf"};
-	};
-	class vn_b_air_uh1c_07_01 {
-		tags[] = {"uh1","armed","transport","helicopter","army"};
-	};
-	class vn_b_air_uh1d_02_01 {
-		tags[] = {"uh1","armed","transport","helicopter","army"};
-	};
-	class vn_b_air_uh1d_02_04 {
-		tags[] = {"uh1","armed","transport","helicopter","usmc"};
-	};
-	class vn_b_air_uh1d_01_01 {
-		tags[] = {"uh1","medical","transport","helicopter","Dustoff"};
 	};
 	class vn_i_air_ch34_01_02 {
 		tags[] = {"ch34","armed","transport","helicopter","arvn"};
@@ -67,25 +61,51 @@ class vehicles {
 	class vn_b_air_uh1d_04_09 {
 		tags[] = {"uh1", "transport", "helicopter", "cia"};
 	};
-	class vn_b_air_uh1d_02_02 {
-		tags[] = {"uh1", "transport", "helicopter", "7th"};
+	class vn_b_air_uh1c_07_01 {
+		tags[] = {"uh1","armed","transport","helicopter","army"};
 	};
 	class vn_b_air_uh1c_07_02 {
 		tags[] = {"uh1", "transport", "helicopter", "7th"};
 	};
-	class vn_b_air_ch47_03_02 {
-		tags[] = {"ch47", "transport", "helicopter", "7th"};
+	class vn_b_air_uh1c_07_03 {
+		tags[] = {"uh1", "transport", "helicopter", "usaf"};
 	};
-	class vn_b_air_ch47_01_02 {
-		tags[] = {"ch47", "transport", "helicopter", "7th"};
+	class vn_b_air_uh1c_07_04 {
+		tags[] = {"uh1", "transport", "helicopter", "usmc"};
+	};
+	class vn_b_air_uh1c_07_05 {
+		tags[] = {"uh1", "transport", "helicopter", "frogmen"};
+	};
+	class vn_b_air_uh1c_07_06 {
+		tags[] = {"uh1", "transport", "helicopter", "anzac"};
 	};
 	class vn_b_air_uh1c_07_07 {
 		tags[] = {"uh1", "transport", "helicopter", "tf"};
 	};
+	class vn_b_air_uh1d_02_01 {
+		tags[] = {"uh1","armed","transport","helicopter","army"};
+	};
+	class vn_b_air_uh1d_02_02 {
+		tags[] = {"uh1", "transport", "helicopter", "7th"};
+	};
+	class vn_b_air_uh1d_02_03 {
+		tags[] = {"uh1", "transport", "helicopter", "usaf"};
+	};
+	class vn_b_air_uh1d_02_04 {
+		tags[] = {"uh1","transport","helicopter","usmc"};
+	};
+	class vn_b_air_uh1d_02_05 {
+		tags[] = {"uh1", "transport", "helicopter", "frogmen"};
+	};
+	class vn_b_air_uh1d_02_06 {
+		tags[] = {"uh1", "transport", "helicopter", "anzac"};
+	};
 	class vn_b_air_uh1d_02_07 {
 		tags[] = {"uh1", "transport", "helicopter", "tf"};
 	};
-
+	class vn_b_air_uh1f_01_03 {
+		tags[] = {"uh1", "transport", "helicopter", "usaf"};
+	};
 
 	//Helo CAS
 	class vn_b_air_ach47_01_01 {
@@ -185,13 +205,13 @@ class vehicles {
 
 	//Armor
 	class vn_b_armor_m41_01_01 {
-		tags[] = {"m41a3","armed","firesupport","tank","lighttank","antitank"};
+		tags[] = {"m41a3","armed","firesupport","tank","lighttank","antitank","army"};
 	};
 	class vn_b_armor_m48_01_01 {
-		tags[] = {"m48a3","armed","firesupport","tank","heavytank","antitank"};
+		tags[] = {"m48a3","armed","firesupport","tank","heavytank","antitank","army"};
 	};
 	class vn_b_armor_m67_01_01 {
-		tags[] = {"m67a2","armed","firesupport","tank","flamethrower"};
+		tags[] = {"m67a2","armed","firesupport","tank","flamethrower","army"};
 	};
 	class vn_b_armor_m41_01_02 {
 		tags[] = {"m41a3","armed","firesupport","tank","lighttank","antitank","usmc"};
@@ -761,14 +781,14 @@ class spawn_point_types {
 			class mule {
 				name = "M274 Mule";
 				icon = VEHICLE_ICON_CAR;
-				include[] = { { "m274", "airport" } };
-				exclude[] = { {"armed"} };
+				include[] = { { "m274","airport" } };
+				exclude[] = { { "armed" } };
 			};
 			class truck {
 				name = "Truck";
 				icon = VEHICLE_ICON_TRUCK;
 				include[] = { { "truck", "airport" } };
-				exclude[] = { {"armed"} };
+				exclude[] = { { "armed" } };
 			};
 		};
 	};
@@ -781,14 +801,14 @@ class spawn_point_types {
 				name = "M151A1";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { { "m151a1", "armed" } };
-				exclude[] = { {"transport","usmc"} };
+				exclude[] = { { "transport","usmc" } };
 			};
 
 			class mule {
 				name = "M274 Mule";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { { "m274", "armed" } };
-				exclude[] = { {"transport", "airport"} };
+				exclude[] = { { "transport", "airport" } };
 			};
 		};
 	};
@@ -802,14 +822,14 @@ class spawn_point_types {
 				name = "M113";
 				icon = VEHICLE_ICON_ARMOUR;
 				include[] = { { "m113", "transport" } };
-				exclude[] = { {"firesupport" } };
+				exclude[] = { { "firesupport" } };
 			};
 
 			class trucks {
 				name = "Trucks";
 				icon = VEHICLE_ICON_TRUCK;
 				include[] = { { "truck", "transport" } };
-				exclude[] = { {"firesupport", "airport"} };
+				exclude[] = { { "firesupport", "airport" } };
 			};
 		};
 	};
@@ -836,13 +856,13 @@ class spawn_point_types {
 			class car {
 				name = "Cars";
 				icon = VEHICLE_ICON_CAR;
-				include[] = {	{ "car", "medical" } };
+				include[] = { { "car", "medical" } };
 				exclude[] = { { "pavn" } };
 			};
 			class truck {
 				name = "Trucks";
 				icon = VEHICLE_ICON_TRUCK;
-				include[] = {	{ "truck", "medical" } };
+				include[] = { { "truck", "medical" } };
 				exclude[] = { { "pavn" } };
 			};
 		};
@@ -877,8 +897,8 @@ class spawn_point_types {
 			class tanks {
 				name = "Tanks";
 				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "tank" } };
-				exclude[] = { { "arvn" , "usmc" } };
+				include[] = { { "tank","army" } };
+				exclude[] = { { "arvn","usmc","pavn" } };
 			};
 		};
 	};
@@ -935,6 +955,89 @@ class spawn_point_types {
 		};
 	};
 
+class acr {
+		name = "11th ACR Vehicles";
+		RESPAWN_SHORT;
+		class categories {
+			class tanks {
+				name = "Tanks";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "tank","army" } };
+				exclude[] = { { "arvn","usmc","pavn"} };
+			};
+			class m113 {
+				name = "M113";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "m113","transport","firesupport","artillery" } };
+				exclude[] = { { "pavn" } };
+			};
+			class trucks {
+				name = "Trucks";
+				icon = VEHICLE_ICON_TRUCK;
+				include[] = { { "truck","transport","firesupport" } };
+				exclude[] = { { "pavn" } };
+			};
+		};
+	};
+
+	class anzac {
+		name = "ANZAC Vehicles";
+		RESPAWN_SHORT;
+		class categories {
+			class dirtranger_t {
+				name = "Dirt Ranger";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { { "dirtranger", "transport" } };
+				exclude[] = { {"armed" } };
+			};
+			class dirtranger_p {
+				name = "Armed Dirt Ranger";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { { "dirtranger", "armed" } };
+				exclude[] = { {"transport" } };
+			};
+		};
+	};
+
+	class usmc_light {
+		name = "USMC Wheeled Vehicles";
+		RESPAWN_SHORT;
+		class categories {
+			class m54_t {
+				name = "M54";
+				icon = VEHICLE_ICON_TRUCK;
+				include[] = { { "m54","usmc" } };
+				exclude[] = { { "pavn" } };
+			};
+			class m151a {
+				name = "Jeep";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { { "m151a", "usmc" } };
+				exclude[] = { { "pavn" } };
+			};
+		};
+	};
+
+	class usmc_heavy {
+		name = "USMC Armor Vehicles";
+		RESPAWN_SHORT;
+		class categories {
+			class m113 {
+				name = "APC";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "m113", "transport", "firesupport" } };
+				exclude[] = { { "artillery","pavn" } };
+			}
+			class usmctank {
+				name = "Tanks";
+				icon = VEHICLE_ICON_TANK;
+				include[] = { { "tank","usmc" } };
+				exclude[] = { { "pavn","arvn" } };				
+			};
+		};
+	};
+
+
 	class air_scout {
 		name = "Scout air";
 		RESPAWN_SHORT;
@@ -943,8 +1046,8 @@ class spawn_point_types {
 			class cayuse {
 				name = "OH-6A";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { {"oh6a" } };
-				exclude[] = { {"firesupport" } };
+				include[] = { {"oh6a","transport" } };
+				exclude[] = { {"firesupport","scout" } };
 			};
 		};
 	};
@@ -969,7 +1072,7 @@ class spawn_point_types {
 				name = "Air America";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { {"uh1", "transport", "cia"} };
-				exclude[] = { { "pavn" } };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","frogmen","anzac","7th"} };
 			}
 		};
 	};
@@ -982,14 +1085,14 @@ class spawn_point_types {
 			class cayuse {
 				name = "OH-6A";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { {"oh6a","transport"} };
+				include[] = { {"oh6a","transport","scout"} };
 				exclude[] = { {"firesupport","GL","pavn"} };
 			};
 			class uh1 {
 				name = "UH-1";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { {"uh1","7th"} };
-				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn"} };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","frogmen","anzac"} };
 			}
 			class ch47 {
 				name = "CH-47A";
@@ -997,6 +1100,147 @@ class spawn_point_types {
 				include[] = { {"ch47","7th"} };
 				exclude[] = { {"firesupport","medical","army","pavn"} };
 			}
+		};
+	};
+
+	class air_udt {
+		name = "Frogmen Helicopters";
+		RESPAWN_SHORT;
+
+		class categories {
+			class cayuse {
+				name = "OH-6A";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"oh6a","transport"} };
+				exclude[] = { {"firesupport","pavn"} };
+			};
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"uh1","frogmen"} };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","7th","anzac"} };
+			}
+			class ch47 {
+				name = "CH-47A";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"ch47","army"} };
+				exclude[] = { {"firesupport","medical","army","pavn","7th"} };
+			}
+		};
+	};
+
+	class air_anzac {
+		name = "ANZAC Helicopters";
+		RESPAWN_SHORT;
+
+		class categories {
+			class cayuse {
+				name = "OH-6A";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"oh6a","transport"} };
+				exclude[] = { {"firesupport","pavn"} };
+			};
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"uh1","anzac"} };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","7th","frogmen"} };
+			}
+		};
+	};
+
+	class air_arvn {
+		name = "ARVN Helicopters";
+		WRECK_MEDIUM;
+
+		class categories {
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "uh1","arvn" } };
+			};
+			class ch34 {
+				name = "CH-34";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "ch34","arvn" } };
+			};
+		};
+	};
+
+	class air_usaf {
+		name = "USAF air";
+		RESPAWN_SHORT;
+
+		class categories {
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"uh1","transport","usaf" } };
+				exclude[] = { {"firesupport", "7thcav","usmc","arvn","army"} };
+			};
+		};
+	};
+
+	class air_usmc {
+		name = "USMC Helicopters";
+		RESPAWN_SHORT;
+		class categories {
+			class ch34_t {
+				name = "CH-34";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "ch34","usmc" } };
+				exclude[] = { { "pavn" } };
+			};
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "uh1", "usmc" } };
+				exclude[] = { { "pavn" } };
+			};
+		};
+	};
+
+	class air_tf {
+		name = "SOG Helicopters";
+		RESPAWN_SHORT;
+		class categories {
+			class cayuse {
+				name = "OH-6A";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"oh6a","transport"}};
+				exclude[] = { {"firesupport","scout"} };			
+			};
+			class uh1 {
+				name = "UH-1";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "uh1", "tf" } };
+				exclude[] = { { "pavn" } };
+			};
+			class ch47 {
+				name = "CH-47";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"ch47","transport","army"} };
+				exclude[] = { {"firesupport","7th"} };
+			};
+		};
+	};
+
+	class air_dustoff {
+		name = "Dust-off and Medevac";
+		RESPAWN_MEDIUM;
+		class categories {
+			class uh1 {
+				name = "UH-1 Medical";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "uh1", "medical", "dustoff" } };
+				exclude[] = { { "pavn" } };
+			};
+			class ch47 {
+				name = "Ch-47 Medical";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { { "ch47", "medical", "dustoff" } };
+				exclude[] = { { "pavn" } };
+			};
 		};
 	};
 
@@ -1020,41 +1264,35 @@ class spawn_point_types {
 	};
 
 	class air_transport_medium {
-		name = "Medium air";
+		name = "Medium Lift";
 		RESPAWN_SHORT;
 
 		class categories {
 			class uh1 {
 				name = "UH-1";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { {"uh1" } };
+				include[] = { {"uh1","transport","army" } };
 				exclude[] = { {"firesupport", "7thcav","usmc","arvn"} };
 			};
 		};
 	};
 
 	class air_transport_heavy {
-		name = "Heavy Air";
+		name = "Heavy Lift";
 		RESPAWN_MEDIUM;
 
 		class categories {
-			class ch34 {
-				name = "CH-34";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { {"ch34" }};
-				exclude[] = { {"firesupport", "usmc" } };
-			};
 			class ch47 {
 				name = "CH-47";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { {"ch47" }};
-				exclude[] = { {"firesupport", "7thcav" } };
+				include[] = { {"ch47","army" }};
+				exclude[] = { {"firesupport", "7th" } };
 			};
 		};
 	};
 
 	class air_transport_all {
-		name = "Air transport";
+		name = "Air Transport";
 		RESPAWN_MEDIUM;
 
 		class categories {
@@ -1069,13 +1307,7 @@ class spawn_point_types {
 				name = "UH-1";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { {"uh1","transport","army"} };
-				exclude[] = { {"firesupport","dustoff","usmc","7th","cia"} };
-			};
-			class ch34 {
-				name = "CH-34";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { {"ch34","transport"} };
-				exclude[] = { {"firesupport","usmc","arvn"} };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","7th","frogmen","anzac"} };
 			};
 			class ch47 {
 				name = "CH-47";
@@ -1086,33 +1318,17 @@ class spawn_point_types {
 		};
 	};
 
-	class air_arvn {
-		name = "ARVN Helicopters";
-		WRECK_MEDIUM;
 
-		class categories {
-			class uh1 {
-				name = "UH-1";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "uh1","arvn" } };
-			};
-			class ch34 {
-				name = "CH-34";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "ch34","arvn" } };
-			};
-		};
-	};
 
 	class air_fire_support {
 		name = "Close Air Support";
 		WRECK_LONG;
 
 		class categories {
-			class ch47 {
-				name = "CH-47";
+			class cayuse {
+				name = "OH-6A";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { { "ch47", "firesupport" } };
+				include[] = { { "oh6a", "armed", :"firesupport" } };
 				exclude[] = { { "pavn" } };
 			};
 			class ah1g {
@@ -1133,12 +1349,13 @@ class spawn_point_types {
 				include[] = { { "ch34", "firesupport" } };
 				exclude[] = { { "pavn" } };
 			};
-			class cayuse {
-				name = "OH-6A";
+			class ch47 {
+				name = "CH-47";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { { "oh6a", "armed", :"firesupport" } };
+				include[] = { { "ch47", "firesupport" } };
 				exclude[] = { { "pavn" } };
 			};
+
 		};
 	};
 
@@ -1246,142 +1463,9 @@ class spawn_point_types {
 		};
 	};
 
-	class acr {
-		name = "11th ACR Vehicles";
-		RESPAWN_SHORT;
-		class categories {
-			class tanks {
-				name = "Tanks";
-				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "tank" } };
-				exclude[] = { { "arvn","usmc","pavn"} };
-			};
-			class m113 {
-				name = "M113";
-				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113","transport","firesupport" } };
-				exclude[] = { { "pavn" } };
-			};
-			class trucks {
-				name = "Trucks";
-				icon = VEHICLE_ICON_TRUCK;
-				include[] = { { "truck","transport","firesupport" } };
-				exclude[] = { { "pavn" } };
-			};
-		};
-	};
+	
 
-	class anzac {
-		name = "ANZAC Vehicles";
-		RESPAWN_SHORT;
-		class categories {
-			class dirtranger_t {
-				name = "Dirt Ranger";
-				icon = VEHICLE_ICON_CAR;
-				include[] = { { "dirtranger", "transport" } };
-				exclude[] = { {"armed" } };
-			};
-			class dirtranger_p {
-				name = "Armed Dirt Ranger";
-				icon = VEHICLE_ICON_CAR;
-				include[] = { { "dirtranger", "armed" } };
-				exclude[] = { {"transport" } };
-			};
-		};
-	};
-
-	class usmc_light {
-		name = "USMC Wheeled Vehicles";
-		RESPAWN_SHORT;
-		class categories {
-			class m54_t {
-				name = "M54";
-				icon = VEHICLE_ICON_TRUCK;
-				include[] = { { "m54","usmc" } };
-				exclude[] = { { "pavn" } };
-			};
-			class m151a {
-				name = "Jeep";
-				icon = VEHICLE_ICON_CAR;
-				include[] = { { "m151a", "usmc" } };
-				exclude[] = { { "pavn" } };
-			};
-		};
-	};
-
-	class usmc_heavy {
-		name = "USMC Armor Vehicles";
-		RESPAWN_SHORT;
-		class categories {
-			class m113 {
-				name = "APC";
-				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113", "transport", "firesupport" } };
-				exclude[] = { { "artillery" } };
-			}
-			class usmctank {
-				name = "Tanks";
-				icon = VEHICLE_ICON_TANK;
-				include[] = { { "tank","usmc" } };
-			};
-		};
-	};
-
-	class usmc_helo {
-		name = "USMC Helicopters";
-		RESPAWN_SHORT;
-		class categories {
-			class ch34_t {
-				name = "CH-34";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "ch34","usmc" } };
-				exclude[] = { { "pavn" } };
-			};
-			class uh1 {
-				name = "UH-1";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "uh1", "usmc" } };
-				exclude[] = { { "pavn" } };
-			};
-		};
-	};
-
-	class air_tf {
-		name = "SOG Helicopters";
-		RESPAWN_SHORT;
-		class categories {
-			class uh1 {
-				name = "UH-1";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "uh1", "tf" } };
-				exclude[] = { { "pavn" } };
-			};
-			class ch47 {
-				name = "CH-47";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { {"ch47","transport","army"} };
-				exclude[] = { {"firesupport","7th"} };
-			};
-		};
-	};
-	class dustoff {
-		name = "Dust-Off";
-		RESPAWN_MEDIUM;
-		class categories {
-			class ch47 {
-				name = "Ch-47 Medical";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "ch47", "medical", "dustoff" } };
-				exclude[] = { { "pavn" } };
-			};
-			class uh1 {
-				name = "UH-1 Medical";
-				icon = VEHICLE_ICON_HELO;
-				include[] = { { "uh1", "medical", "dustoff" } };
-				exclude[] = { { "pavn" } };
-			};
-		};
-	};
+//DAC
 	class dac_car {
 		name = "Wheeled Vehicle";
 		RESPAWN_MEDIUM;

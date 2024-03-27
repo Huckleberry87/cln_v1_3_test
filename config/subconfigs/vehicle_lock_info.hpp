@@ -1,3 +1,5 @@
+//TEAMCLASS "MACV","DacCong","MikeForce","SpikeTeam","ACAV","GreenHornets","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"
+
 class unlocked 
 {
 	lockTeam[] = {};
@@ -6,7 +8,7 @@ class unlocked
 //PUBLIC AIRCRAFT
 class green_hornet
 {
-	lockTeam[] = {"MACV","DacCong", "GreenHornets","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
+	lockTeam[] = {"MACV","DacCong","GreenHornets","3rdMEU","MilitaryPolice","QuarterHorse","Frogmen","Muskets","SatansAngels","633rdCSG","7thCAV","TigerForce","SASR","ARVN"};
 };
 
 //PUBLIC ARMOR 
@@ -73,6 +75,24 @@ class frogmen
 class aircav
 {
 	lockTeam[] = {"MACV","DacCong","7thCAV"};
+};
+
+// WL ANZAC
+class anzac
+{
+	lockTeam[] = {"MACV","DacCong","SASR"};
+};
+
+// WL 633rd
+class usaf
+{
+	lockTeam[] = {"MACV","DacCong","633rdCSG"};
+};
+
+// WL Tiger Force
+class tf
+{
+	lockTeam[] = {"MACV","DacCong","TigerForce"};
 };
 
 // WL OPFOR
@@ -247,8 +267,8 @@ class vn_b_air_ch47_04_01 : green_hornet {};
 class vn_b_air_ch47_03_02 : aircav {};
 class vn_b_air_ch47_01_02 : aircav {};
 //Choctaw
-class vn_b_air_ch34_01_01 : green_hornet {};
-class vn_b_air_ch34_03_01 : green_hornet {};
+class vn_b_air_ch34_01_01 : usmc {};
+class vn_b_air_ch34_03_01 : usmc {};
 //CH34 - Heavy Transport
 class vn_i_air_ch34_01_02 : arvn {};
 class vn_i_air_ch34_02_01 : arvn {};
@@ -266,12 +286,14 @@ class vn_b_air_oh6a_07 : green_hornet {};
 class vn_b_air_uh1b_01_01 : green_hornet {};
 //UH1B - Slick
 class vn_b_air_uh1c_07_01 : green_hornet {};
+class vn_b_air_uh1c_07_05 : frogmen {};
+class vn_b_air_uh1c_07_06 : anzac {};
 //UH1B - Air Cav Slick
 class vn_b_air_uh1c_07_02 : aircav {};
 //UH1D - Dustoff
 class vn_b_air_uh1d_01_01 : green_hornet {};
 class vn_b_air_uh1d_01_02 : green_hornet {};
-class vn_b_air_uh1d_01_03 : green_hornet {};
+class vn_b_air_uh1d_01_03 : usaf {};
 class vn_b_air_uh1d_01_04 : green_hornet {};
 class vn_b_air_uh1d_01_05 : green_hornet {};
 class vn_b_air_uh1d_01_06 : green_hornet {};
@@ -279,15 +301,17 @@ class vn_b_air_uh1d_01_07 : green_hornet {};
 //UH1D - Slick
 class vn_b_air_uh1d_02_01 : green_hornet {};
 class vn_b_air_uh1d_02_02 : aircav {};
-class vn_b_air_uh1d_02_03 : green_hornet {};
-class vn_b_air_uh1d_02_04 : green_hornet {};
-class vn_b_air_uh1d_02_05 : green_hornet {};
-class vn_b_air_uh1d_02_06 : green_hornet {};
-class vn_b_air_uh1d_02_07 : green_hornet {};
+class vn_b_air_uh1d_02_03 : usaf {};
+class vn_b_air_uh1d_02_04 : usmc {};
+class vn_b_air_uh1d_02_05 : frogmen {};
+class vn_b_air_uh1d_02_06 : anzac {};
+class vn_b_air_uh1d_02_07 : tf {};
 //UH-1E - Slick
-class vn_b_air_uh1e_03_04 : green_hornet {};
+class vn_b_air_uh1e_03_04 : usmc {};
+class vn_b_air_uh1c_07_04 : usmc {};
 //UH1F - Slick
-class vn_b_air_uh1f_01_03 : green_hornet {};
+class vn_b_air_uh1f_01_03 : usaf {};
+class vn_b_air_uh1c_07_03 : usaf {};
 
 //F4 aircraft
 class vn_b_air_f4c_cap : sa {};

@@ -37,7 +37,7 @@ class objects
 
 	class vn_mf_macv_WL1_teleporter
 	{
-		destinations[] = {"quarterhorse_base", "7th_cav_base", "3rdMEU_base",  "arvn_base", "quarterhorse_fsb"};
+		destinations[] = {"quarterhorse_base", "7th_cav_base", "3rdMEU_base",  "arvn_base", "633rd_base", "quarterhorse_fsb"};
 	};
 
 	class vn_mf_macv_WL2_teleporter
@@ -317,6 +317,12 @@ class destinations
 	{
 		image = "custom\taskroster\ARVN_HL.paa"; 
 		position_marker = "mf_respawn_arvn";
+	};
+
+	class 633rd_base
+	{
+		image = "custom\taskroster\633rdcombatsupportgroup_HL.paa"; 
+		position_marker = "mf_respawn_633rdcsg";
 	};
 
 	class vacang { image = "custom\daccong_team.paa"; position_marker = "zone_vacang"; };
